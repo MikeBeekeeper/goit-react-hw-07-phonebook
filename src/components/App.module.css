@@ -1,0 +1,37 @@
+.app {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    color: #010101;
+    padding-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .app {
+        width: 50%;
+    }    
+}
+
+h1 {
+    margin: 0;
+    padding: 5px;
+    font-size: 40px;
+}
+
+h2 {
+    margin: 0;
+    padding: 5px;
+    font-size: 30px;
+}
+
+.contactsWrapper {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
