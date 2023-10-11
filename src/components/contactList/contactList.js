@@ -5,7 +5,7 @@ import { getAllContacts, removeContact } from 'redux/slice';
 const ContactList = () => {
   const contacts = useSelector(state => state.contacts.items);
   const filterValue = useSelector(state => state.filter);
-  const error = useSelector(state => state.contacts.error)
+  // const error = useSelector(state => state.contacts.error)
   const loading = useSelector(state => state.contacts.isLoading)
   const dispatch = useDispatch();
 
@@ -22,7 +22,6 @@ const ContactList = () => {
   
   return (
     <>
-    {error && alert('Whoops! Something wrong(((')}
     {loading && <div>Loading in process...</div>}
       {contacts && (
         <ul className={css.contactList}>

@@ -46,11 +46,10 @@ export const myContactsSlice = createSlice({
     .addCase(removeContact.fulfilled, (state)=>{
       state.isLoading = false
     })
-    .addMatcher((action)=>action.type.endsWith('/pending', handlePending))
-    .addMatcher((action)=>action.type.endsWith('/rejected', handleReject))
+    .addMatcher((action)=>action.type.endsWith('/pending'), handlePending)
+    .addMatcher((action)=>action.type.endsWith('/rejected'), handleReject)
   }
 });
-
 export const myFilterSlice = createSlice({
   name: 'filter',
   initialState: '',

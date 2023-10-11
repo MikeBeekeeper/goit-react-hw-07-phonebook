@@ -16,10 +16,13 @@ useEffect(()=>{
     dispatch(getAllContacts())
   }, [dispatch])
 
+  useEffect(()=>{
+    if(error) alert('Whoops! Something wrong(((')
+  }, [error])
+
   
   return (
     <>
-    {error && alert('Whoops! Something wrong(((')}
     {loading && <div>Loading in process...</div>}
       <div className={css.app}>
         <h1>Phonebook</h1>

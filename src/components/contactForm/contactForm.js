@@ -8,7 +8,7 @@ import { addNewContact } from 'redux/slice';
 const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.items)
-  const error = useSelector(state => state.contacts.error)
+  // const error = useSelector(state => state.contacts.error)
 
 
   const [name, setName] = useState('');
@@ -51,7 +51,6 @@ const ContactForm = () => {
 
   return (
     <>
-        {error && alert('Whoops! Something wrong(((')}
     <form className={css.form} onSubmit={handleClick}>
       <label htmlFor={nameInputId}> Name</label>
       <input
